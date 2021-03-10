@@ -1,10 +1,15 @@
-console.log("It worked!")
+import restaurantImg from './wario-restaurant.jpg';
 
 const module = (() => {
 	const pageLoad = () => {
 		const content = document.getElementById('content');
 		const restaurantImage = document.createElement('img');
-		const srcImage = document.createAttribute('src');
-		restaurantImage.setAttribute(srcImage, '../wario-restaurant.jpg');
+		restaurantImage.setAttribute('src', restaurantImg);
+		content.appendChild(restaurantImage);
+
+		return content;
 	}
+	return { pageLoad }
 })();
+
+document.body.appendChild(module.pageLoad());
