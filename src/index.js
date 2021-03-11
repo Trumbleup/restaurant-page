@@ -1,15 +1,12 @@
-import restaurantImg from './wario-restaurant.jpg';
+import home from "./home.js";
+import navbar from "./navbar"
 
-const module = (() => {
-	const pageLoad = () => {
-		const content = document.getElementById('content');
-		const restaurantImage = document.createElement('img');
-		restaurantImage.setAttribute('src', restaurantImg);
-		content.appendChild(restaurantImage);
+const initialLoad = () => {
+	navbar();
+	home();
+}
 
-		return content;
-	}
-	return { pageLoad }
-})();
+initialLoad();
 
-document.body.appendChild(module.pageLoad());
+
+
