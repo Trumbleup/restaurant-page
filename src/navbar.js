@@ -6,7 +6,6 @@ const button = (id, text) => {
 }
 
 const setNavbar = () => {
-    const content = document.getElementById('content');
     const navElement = document.createElement('nav');
     const homeBtn = button('home', 'Home');
     const menuBtn = button('menu', 'Menu');
@@ -16,17 +15,9 @@ const setNavbar = () => {
     navElement.appendChild(menuBtn);
     navElement.appendChild(contactBtn);
 
-    const buttons = navElement.querySelectorAll("button");
-
     content.appendChild(navElement);
 
-    buttons.forEach(button => {
-        button.addEventListener('click', () => {
-            content.childNodes[2].innerHTML = "hi";
-        })
-    })
-
-    document.body.appendChild(content);
+    document.body.appendChild(navElement);
 };
 
 export default setNavbar

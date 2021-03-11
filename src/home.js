@@ -2,6 +2,7 @@ import restaurantImg from './wario-restaurant.jpg';
 
 const setHome = () => {
     const content = document.getElementById('content');
+    content.innerHTML = "";
 
     const restaurantImage = document.createElement('img');
     restaurantImage.setAttribute('src', restaurantImg);
